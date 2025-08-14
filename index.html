@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Vision Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🍽️ Food Vision Analyzer</h1>
+        
+        <div class="camera-section">
+            <video id="camera" autoplay playsinline muted></video>
+            <canvas id="canvas" style="display: none;"></canvas>
+            
+            <div class="controls">
+                <button id="startCamera" class="btn primary">📷 Start Camera</button>
+                <button id="analyzeBtn" class="btn success" disabled>🔍 Analyze Food</button>
+            </div>
+        </div>
+
+        <div class="analysis-section" id="analysisSection" style="display: none;">
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Analyzing your food...</p>
+            </div>
+            
+            <div class="results" id="results" style="display: none;">
+                <h2>🎯 Detected Foods</h2>
+                <div id="detectedFoods" class="food-list"></div>
+                
+                <h2>🍳 Recipe Suggestions</h2>
+                <div id="recipeButtons" class="recipe-buttons"></div>
+                
+                <div id="recipeDetails" class="recipe-details" style="display: none;">
+                    <h3 id="recipeTitle"></h3>
+                    <div id="recipeContent"></div>
+                    <button id="closeRecipe" class="btn secondary">Close Recipe</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="error-message" id="errorMessage" style="display: none;"></div>
+    </div>
+
+    <script src="camera.js"></script>
+    <script src="chatgpt.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
