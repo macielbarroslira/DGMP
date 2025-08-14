@@ -1,0 +1,26 @@
+{
+  "name": "food-vision-analyzer",
+  "version": "1.0.0",
+  "description": "A demo mobile application that uses ChatGPT Vision with device camera to analyze food and provide recipes",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "deploy": "netlify deploy --prod --dir=. --message \"Deploy Food Vision Analyzer App\"",
+    "deploy:preview": "netlify deploy --dir=. --message \"Preview deployment\""
+  },
+  "keywords": [
+    "chatgpt",
+    "vision",
+    "food",
+    "recipes",
+    "camera",
+    "mobile",
+    "demo"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}
